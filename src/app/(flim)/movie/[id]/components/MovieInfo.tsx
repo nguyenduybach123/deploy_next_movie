@@ -8,7 +8,6 @@ import { defaultCastImage } from '@/assets';
 // Type
 import { CastType, MovieDetailType } from '@/types/types';
 import { Button } from '@/app/(flim)/components';
-import MovieReview from './MovieReview';
 
 type MovieInfoType = {
     detailMovie: MovieDetailType | null | undefined;
