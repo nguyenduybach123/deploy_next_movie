@@ -8,6 +8,7 @@ import { defaultCastImage } from '@/assets';
 // Type
 import { CastType, MovieDetailType } from '@/types/types';
 import { Button } from '@/app/(flim)/components';
+import MovieReview from './MovieReview';
 
 type MovieInfoType = {
     detailMovie: MovieDetailType | null | undefined;
@@ -49,7 +50,7 @@ export const MovieInfo: FC<MovieInfoType> = ({ detailMovie, casts }) => {
                         {detailMovie?.genres.map((genre) => (
                             <li
                                 key={genre.id}
-                                className="bg-black-main border-2 border-white rounded-full text-sm p-2 mr-2"
+                                className="bg-black-main border-2 text-white border-white rounded-full text-sm px-3 py-2 mr-2"
                             >
                                 {genre.name}
                             </li>
