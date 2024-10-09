@@ -12,7 +12,7 @@ import { MovieList } from './components';
 
 // Type
 import { DisplayEnum, MovieResponseType, QueryMovieParamType } from '@/types/types';
-import { Loading, NotFoundQuery, NotFoundResult } from '../components';
+import { Loading, NotFoundQuery, NotFoundResult, SearchBar } from '../components';
 
 const defaultMovies: InfiniteData<MovieResponseType[], unknown> = {
     pages: [],
@@ -99,6 +99,7 @@ const MoviesPageContent = ({ searchParams }: { searchParams: URLSearchParams }) 
             </div>
             <div className="bg-black-main px-8 py-4 md:px-16 md:py-8">
                 <div className="max-w-screen-2xl mx-auto">
+                    <SearchBar />
                     {isFetching ? (
                         <MovieList
                             movies={movies || defaultMovies}
